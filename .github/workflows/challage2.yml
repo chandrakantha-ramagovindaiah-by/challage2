@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout the code
-        uses: action/checkout@v1
+        uses: actions/checkout@v2.3.4
 
       - name: create a artifacts
         run : touch ${{ env.workspace_variable }}
