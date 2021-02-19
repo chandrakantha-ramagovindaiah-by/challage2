@@ -1,0 +1,24 @@
+name: challenge2
+
+env:
+    workspace_varialbe: warehouse_management
+
+on: push
+
+jobs:
+  cha1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code
+        uses: action/checkout@v1
+
+      - name: create a artifacts
+        run : touch ${{ env.workspace_variable }}
+
+      - name: upload artifacts
+        
+
+
+
+    
+
