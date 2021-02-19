@@ -20,6 +20,33 @@ jobs:
         with:
           name: generated_artifact
           path: ./${{ env.workspace_varialbe }} 
+  
+  cha2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the repo
+        uses: actions/checkout@v.2.3.4
+        
+      - name: download the artifacts
+        uses: actions/download-artifact@v2.0.7
+        with:
+           name: ${{ env.workspace_varialbe }}
+           path: ./${{ env.workspace_varialbe }}
+            
+      - name: rename the artifactcs
+        run: mv ${{ env.workspace_varialbe }} renamed_version
+        
+      - name: upload renamed artifactcs
+        uses: actions/upload-artifact@v2.2.1
+        with:
+          name: renamed_artifacts
+          path: renamed_version
+      
+        
+    
+      
+      
+    
           
           
         
