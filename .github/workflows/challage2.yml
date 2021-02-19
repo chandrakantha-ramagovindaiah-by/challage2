@@ -19,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.1
         with:
           name: generated_artifact
-          path: ./ ${{ env.workspace_varialbe }} 
+          path: ./${{ env.workspace_varialbe }} 
           
           
         
