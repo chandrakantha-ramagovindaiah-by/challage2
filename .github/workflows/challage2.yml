@@ -16,6 +16,12 @@ jobs:
         run : touch ${{ env.workspace_variable }}
 
       - name: upload artifacts
+        uses: actions/upload-artifact@v2.2.1
+        with:
+          name: generated_artifact
+          path: ./
+          
+          
         
 
 
